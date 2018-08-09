@@ -913,7 +913,7 @@ export interface KeyboardAuthContext extends AuthContextBase {
      * @param prompts The prompts to send to the client.
      * @param callback A callback to call with the responses from the client.
      */
-    prompt(prompts: string | Prompt | (string | Prompt)[], callback: () => void): void;
+    prompt(prompts: string | Prompt | (string | Prompt)[], callback: (err: string, resposes : string[]) => void): void;
 
     /**
      * Send prompts to the client.
@@ -921,7 +921,7 @@ export interface KeyboardAuthContext extends AuthContextBase {
      * @param title The title for the prompt.
      * @param callback A callback to call with the responses from the client.
      */
-    prompt(prompts: string | Prompt | (string | Prompt)[], title: string, callback: () => void): void;
+    prompt(prompts: string | Prompt | (string | Prompt)[], title: string, callback: (err : any, responses : string[]) => void): void;
 
     /**
      * Send prompts to the client.
@@ -930,7 +930,7 @@ export interface KeyboardAuthContext extends AuthContextBase {
      * @param instructions Instructions for the client.
      * @param callback A callback to call with the responses from the client.
      */
-    prompt(prompts: string | Prompt | (string | Prompt)[], title: string, instructions: string, callback: () => void): void;
+    prompt(prompts: string | Prompt | (string | Prompt)[], title: string, instructions: string, callback: (err : any, responses : string[]) => void): void;
 }
 
 export interface PublicKeyAuthContext extends AuthContextBase {
